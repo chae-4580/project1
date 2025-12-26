@@ -64,14 +64,42 @@ public class Active : MonoBehaviour
 
                 gameObject.SetActive(false);
             }
-            else if(gameObject.name.Equals("door"))
+            else if(gameObject.CompareTag("Coin"))
             {
-                if(GameManager.Instance.KeyAmount > 0)
+                GameManager.Instance.Gold += weight;
+                gameObject.SetActive(false);
+            }
+            else if (gameObject.name.Equals("door"))
+            {
+                if (GameManager.Instance.KeyAmount > 0)
                 {
                     GameManager.Instance.KeyAmount--;
                     gameObject.SetActive(false);
                 }
-                
+                else
+                {
+                    StartCoroutine(Player.Instance.Speak(5));
+                }
+            }
+            else if(gameObject.name.Equals("exit"))
+            {
+                //GameManager.Instance.selling(true);
+
+                GameManager.Instance.StageLoad(GameManager.Instance.mapId);
+            }
+            else if(gameObject.name.Equals("enter"))
+            {
+                GameManager.Instance.StageLoad(GameManager.Instance.mapId);
+            }
+            else if(gameObject.name.Equals("Store"))
+            {
+                Debug.Log("enter_shop");
+                GameManager.Instance.Pause.isOn = true;
+                GameManager.Instance.Store.SetActive(true);
+            }
+            else
+            {
+                gameObject.SetActive(false);
             }
         }
     }

@@ -48,7 +48,7 @@ public class Player : MonoBehaviour
     }
     void Jump()
     {
-        if(!isJumping)
+        if(!isJumping || JumpCount >= GameManager.Instance.JumpLimt)
         {
             isJumping = false;
             return;
@@ -110,10 +110,10 @@ public class Player : MonoBehaviour
             }
             else
             {
-                isJumping = true;
-                JumpCount = 0;
                 rend.color = GameManager.Instance.Hurt;
                 GameManager.Instance.HitTime = 0.5f;
+                isJumping = true;
+                JumpCount = 0;
                 Jump();
             }
         }

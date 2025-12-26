@@ -57,7 +57,7 @@ public class GameManager : MonoBehaviour
     public float HitTime = 0.1f;
     public float AttackDelay = 0f;
     public float Delay = 0f;
-    public int JumpLimt = 0;
+    public int JumpLimt = 2;
     public int Damege = 1;
     public GameObject Dark;
 
