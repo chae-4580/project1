@@ -62,6 +62,7 @@
   <ItemGroup>
     <Compile Include="Assets\script\GameManager.cs" />
     <Compile Include="Assets\script\Player.cs" />
+    <Compile Include="Assets\script\MapinItems.cs" />
     <Compile Include="Assets\script\Active.cs" />
   </ItemGroup>
   <ItemGroup>
