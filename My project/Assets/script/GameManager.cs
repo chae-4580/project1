@@ -60,6 +60,7 @@ public class GameManager : MonoBehaviour
     public int JumpLimt = 2;
     public int Damege = 1;
     public GameObject Dark;
+    public bool isHide = false;
 
     [Header("# Bag Info")]
     public Image[] itemsimage;
@@ -97,6 +98,12 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(stat)
+        {
+            StageLoad(1);
+            stat = false;
+        }
+
         Camera.transform.position = player.position + new Vector3(0, 0, -1);
 
         GoldText.text = Gold.ToString() + "G";
@@ -115,7 +122,13 @@ public class GameManager : MonoBehaviour
         if (Hp > 8) Hp = 8;
         if (curTime > 45) curTime = 45;
 
-        time += Time.deltaTime;
+        if (HitTime > 0)
+        {
+            HitTime -= Time.deltaTime;
+        }
+        else player.gameObject.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1);
+
+            time += Time.deltaTime;
         if (time >= O2tic && 0 < curTime)
         {
             curTime--;
@@ -208,6 +221,7 @@ public class GameManager : MonoBehaviour
                 break;
             case 5:
                 HitTime = 10;
+                isHide = true;
                 player.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0.5f);
                 break;
             case 6:
@@ -221,6 +235,7 @@ public class GameManager : MonoBehaviour
                 StartCoroutine(Player.Instance.Speak(3));
                 break;
         }
+        StartCoroutine(ItemabilityEnd(s_id));
 
         if (immediately) return;
 
@@ -289,6 +304,7 @@ public class GameManager : MonoBehaviour
                 if (nowfan == Fancount) Player.Instance.Speed = 5;
                 break;
             case 5:
+                isHide = false;
                 player.GetComponent<SpriteRenderer>().color = Color.white;
                 break;
             case 6:
@@ -362,4 +378,59 @@ public class GameManager : MonoBehaviour
 
         isClear = false;
     }
-}
+
+    public void selling(bool isLive)
+    {
+        if(isLive)
+        {
+            int j = 0;
+            for(int i = 0; i <SlotAmount; i++)
+            {
+                switch (SlotId[i])
+                {
+                    case 8:
+                        j += 500;
+                        break;
+                    case 9:
+                        j += 1000;
+                        break;
+                    case 10:
+                        j += 2000;
+                        break;
+                    case 11:
+                        j += 3000;
+                        break;
+                    case 12:
+                        j += 3000;
+                        break;
+                    case 13:
+                        j += 4000;
+                        break;
+                    case 14:
+                        j += 7000;
+                        break;
+                    case 15:
+                        j += 10000;
+                        break;
+                    case 16:
+                        j += 100000;
+                        break;
+                }
+                SlotId[i] = -1;
+            }
+            Gold += j;
+            Score += j;
+        }
+        else
+        {
+            for(int i = 0; i < 8; i++)
+            {
+                SlotId[i] = -1;
+            }
+        }
+        SlotAmount = 0;
+        Weight = 0;
+
+        SlotSetting();
+    }
+ }

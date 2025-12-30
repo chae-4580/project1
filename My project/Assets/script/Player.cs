@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Transactions;
 using System.Xml.Serialization;
+using Unity.VisualScripting;
 using UnityEditor.Build.Content;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
@@ -92,7 +93,7 @@ public class Player : MonoBehaviour
 
             if(GameManager.Instance.Hp <= 8)
             {
-
+                StartCoroutine(Dead());
             }
             else
             {
@@ -106,7 +107,7 @@ public class Player : MonoBehaviour
             GameManager.Instance.Hp--;
             if(GameManager.Instance.Hp <= 0)
             {
-
+                StartCoroutine(Dead());
             }
             else
             {
@@ -243,5 +244,25 @@ public class Player : MonoBehaviour
         Debug.Log("¶¯");
     }
 
+    public IEnumerator Dead()
+    {
+        Freeze = true;
+        rigid.rotation = 90f;
+        rigid.constraints = RigidbodyConstraints2D.FreezeAll;
+        gameObject.GetComponent<CircleCollider2D>().enabled = false;
+        //GameManager.Instance.selling(false);
+        speak.SetActive(false);
+        guide.SetActive(false);
+        Debug.Log("¾óÀ½");
 
+        yield return new WaitForSeconds(5f);
+        GameManager.Instance.StageLoad(GameManager.Instance.mapId);
+
+        gameObject.GetComponent<SpriteRenderer>().color = Color.white;
+
+        StartCoroutine(Freezecancel(2f));
+        yield return new WaitForSeconds(2f);
+        rigid.rotation = 0;
+        gameObject.GetComponent<CircleCollider2D>().enabled = true;
+    }
 }
