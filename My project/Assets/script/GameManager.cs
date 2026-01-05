@@ -49,7 +49,7 @@ public class GameManager : MonoBehaviour
     public int stageLimt = 5;
     public bool isMapStart = false;
     public GameObject FoundTresure = null;
-    public Image wace;
+    public Image wave;
     public GameObject waveCenter;
 
     [Header("# Player Info")]
@@ -57,8 +57,9 @@ public class GameManager : MonoBehaviour
     public float HitTime = 0.1f;
     public float AttackDelay = 0f;
     public float Delay = 0f;
+    public Image AttackDelayimage;
     public int JumpLimt = 2;
-    public int Damege = 1;
+    public int Damage = 1;
     public GameObject Dark;
     public bool isHide = false;
 
@@ -119,6 +120,69 @@ public class GameManager : MonoBehaviour
             Hp = 8;
         }
 
+        if(Input.GetKeyDown(KeyCode.F2))
+        {
+            isFree = true;
+            for(int i = 0; i<5; i++)
+            {
+                SText[i].transform.GetChild(0).GetComponent<Text>().text = "0G";
+            }
+        }
+
+        if(Input.GetKeyDown(KeyCode.F3))
+        {
+            Debug.Log("F3");
+            Debug.Log("reset");
+
+            curTime = -1;
+            selling(false);
+
+            if (mapId != 0) StageLoad(0);
+            else StageLoad(Stage);
+        }
+
+        if(Input.GetKeyDown(KeyCode.F4))
+        {
+            Debug.Log("F4");
+
+            curTime = -1;
+            selling(false);
+            if (Stage != 5)
+             {
+                Stage++;
+                StageLoad(0);
+            }
+
+            else if (mapId == 0)
+            {
+                Stage = 1;
+                StageLoad(0);
+            }
+
+            else Debug.Log("is none");
+            }
+        if(Input.GetKeyDown(KeyCode.F5))
+        {
+            Time.timeScale = 0;
+            Pause.isOn = !Pause.isOn;
+            Pause.gameObject.SetActive(Pause.isOn);
+        }
+
+        if(Input.GetKeyDown(KeyCode.F6))
+        {
+            Player.Instance.Speed = 10;
+        }
+
+        if(!Pause.isOn)
+        {
+            Time.timeScale = 1;
+            Pause.gameObject.SetActive(false);
+        }
+
+        if (Hp <= 0 || 0 > curTime || mapId == 0 || Pause.isOn)
+            return;
+        
+
         if (Hp > 8) Hp = 8;
         if (curTime > 45) curTime = 45;
 
@@ -128,13 +192,42 @@ public class GameManager : MonoBehaviour
         }
         else player.gameObject.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1);
 
+        if (AttackDelay >= Delay)
+        {
+            Delay += Time.deltaTime;
+
+            AttackDelayimage.fillAmount = Delay / AttackDelay;
+            Debug.Log(Delay);
+        }
+        else AttackDelayimage.fillAmount = 0;
+
+
             time += Time.deltaTime;
         if (time >= O2tic && 0 < curTime)
         {
             curTime--;
             time = 0;
         }
-        if(Input.GetKeyDown(KeyCode.Alpha1))
+
+        else if(0 == curTime)
+        {
+            StartCoroutine(Player.Instance.Dead());
+            curTime--;
+            Debug.Log("dead");
+        }
+
+        if(waveCenter.gameObject.activeSelf)
+        {
+            float distance = Vector2.Distance(player.position, FoundTresure.transform.position);
+            Debug.Log($"{distance}");
+
+            if (distance < 3) wave.fillAmount = 0;
+            else wave.fillAmount = 1;
+
+            waveCenter.transform.rotation = Quaternion.FromToRotation(Vector3.up, FoundTresure.transform.position - player.position);
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             Slotactive(1, false);
         }
@@ -321,6 +414,7 @@ public class GameManager : MonoBehaviour
         curTime = 45;
         Hp = 8;
         Weight = 0;
+        Delay = AttackDelay;
         FoundTresure = null;
 
         if(i == 0)
@@ -432,5 +526,66 @@ public class GameManager : MonoBehaviour
         Weight = 0;
 
         SlotSetting();
+    }
+
+    public void StoreClose()
+    {
+        Pause.isOn = false;
+        Store.SetActive(false);
+        isFree = false;
+
+        for(int i = 0; i < 5; i++)
+        {
+            SText[i].transform.GetChild(0).GetComponent<Text>().text = SPrice[i].ToString() + "G";    
+        }
+    }
+
+    public void O2GasUpgrade()
+    {
+        if(isFree)
+        {
+            O2level++;
+
+            switch(O2level - 1)
+            {
+                case 1:
+                    SPrice[0] = 1000;
+                    SText[0].transform.GetChild(0).GetComponent<Text>().text = "0G";
+                    SText[0].GetComponent<Text>().text = "중압용 산소통";
+                    break;
+                case 2:
+                    SPrice[0] = 3000;
+                    SText[0].transform.GetChild(0).GetComponent<Text>().text = "0G";
+                    SText[0].GetComponent<Text>().text = "고압용 산소통";
+                    break;
+                case 3:
+                    GameObject.Find("O2Gas_Sell").SetActive(false);
+                    break;
+            }
+            return;
+        }
+
+        if (Gold < SPrice[0]) return;
+        
+        Gold -= SPrice[0];
+
+        O2level++;
+
+        switch(O2level - 1)
+        {
+            case 1:
+                SPrice[0] = 1000;
+                SText[0].transform.GetChild(0).GetComponent<Text>().text = SPrice[0].ToString() + "G";
+                SText[0].GetComponent<Text>().text = "중압용 산소통";
+                break;
+            case 2:
+                SPrice[0] = 3000;
+                SText[0].transform.GetChild(0).GetComponent<Text>().text = SPrice[0].ToString() + "G";
+                SText[0].GetComponent<Text>().text = "고압용 산소통";
+                break;
+            case 3:
+                GameObject.Find("O2Gas_Sell").SetActive(false);
+                break;
+        }
     }
  }

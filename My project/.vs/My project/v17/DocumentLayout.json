@@ -1,21 +1,33 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\project1\\My project\\",
+  "WorkspaceRootPath": "C:\\Users\\user\\Documents\\GitHub\\project1\\My project\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|c:\\project1\\my project\\assets\\script\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|C:\\Users\\user\\Documents\\GitHub\\project1\\My project\\assets\\script\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|C:\\project1\\My project\\assets\\script\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|c:\\users\\user\\documents\\github\\project1\\my project\\assets\\script\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|C:\\project1\\My project\\assets\\script\\active.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|C:\\Users\\user\\Documents\\GitHub\\project1\\My project\\assets\\script\\active.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\active.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|C:\\project1\\My project\\assets\\script\\mapinitems.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|c:\\users\\user\\documents\\github\\project1\\my project\\assets\\script\\orc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\orc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|C:\\Users\\user\\Documents\\GitHub\\project1\\My project\\assets\\script\\monster.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\monster.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|C:\\Users\\user\\Documents\\GitHub\\project1\\My project\\assets\\script\\ghost.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\ghost.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|C:\\Users\\user\\Documents\\GitHub\\project1\\My project\\assets\\script\\mapinitems.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\mapinitems.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -32,11 +44,11 @@
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "Active.cs",
-              "DocumentMoniker": "C:\\project1\\My project\\Assets\\script\\Active.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Documents\\GitHub\\project1\\My project\\Assets\\script\\Active.cs",
               "RelativeDocumentMoniker": "Assets\\script\\Active.cs",
-              "ToolTip": "C:\\project1\\My project\\Assets\\script\\Active.cs",
+              "ToolTip": "C:\\Users\\user\\Documents\\GitHub\\project1\\My project\\Assets\\script\\Active.cs",
               "RelativeToolTip": "Assets\\script\\Active.cs",
-              "ViewState": "AgIAAEsAAAAAAAAAAAAIwFkAAAAsAAAAAAAAAA==",
+              "ViewState": "AgIAAFoAAAAAAAAAAAAQwGIAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-10T05:44:03.725Z",
               "IsPinned": true,
@@ -46,14 +58,64 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "GameManager.cs",
-              "DocumentMoniker": "C:\\project1\\My project\\Assets\\script\\GameManager.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Documents\\GitHub\\project1\\My project\\Assets\\script\\GameManager.cs",
               "RelativeDocumentMoniker": "Assets\\script\\GameManager.cs",
-              "ToolTip": "C:\\project1\\My project\\Assets\\script\\GameManager.cs",
+              "ToolTip": "C:\\Users\\user\\Documents\\GitHub\\project1\\My project\\Assets\\script\\GameManager.cs",
               "RelativeToolTip": "Assets\\script\\GameManager.cs",
-              "ViewState": "AgIAAJwBAAAAAAAAAAAcwLEBAAAWAAAAAAAAAA==",
+              "ViewState": "AgIAAFMAAAAAAAAAAADwv18AAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-10T06:03:33.778Z",
               "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Orc.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Documents\\GitHub\\project1\\My project\\Assets\\script\\Orc.cs",
+              "RelativeDocumentMoniker": "Assets\\script\\Orc.cs",
+              "ToolTip": "C:\\Users\\user\\Documents\\GitHub\\project1\\My project\\Assets\\script\\Orc.cs",
+              "RelativeToolTip": "Assets\\script\\Orc.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAlwBgAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-05T04:48:29.605Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Ghost.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Documents\\GitHub\\project1\\My project\\Assets\\script\\Ghost.cs",
+              "RelativeDocumentMoniker": "Assets\\script\\Ghost.cs",
+              "ToolTip": "C:\\Users\\user\\Documents\\GitHub\\project1\\My project\\Assets\\script\\Ghost.cs",
+              "RelativeToolTip": "Assets\\script\\Ghost.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAADwvxUAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-05T04:18:55.675Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Monster.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Documents\\GitHub\\project1\\My project\\Assets\\script\\Monster.cs",
+              "RelativeDocumentMoniker": "Assets\\script\\Monster.cs",
+              "ToolTip": "C:\\Users\\user\\Documents\\GitHub\\project1\\My project\\Assets\\script\\Monster.cs",
+              "RelativeToolTip": "Assets\\script\\Monster.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAIwCAAAABLAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-05T02:56:52.147Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Player.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Documents\\GitHub\\project1\\My project\\Assets\\script\\Player.cs",
+              "RelativeDocumentMoniker": "Assets\\script\\Player.cs",
+              "ToolTip": "C:\\Users\\user\\Documents\\GitHub\\project1\\My project\\Assets\\script\\Player.cs",
+              "RelativeToolTip": "Assets\\script\\Player.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAADgv5sAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-10T04:50:42.884Z",
               "EditorCaption": ""
             },
             {
@@ -62,28 +124,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "MapinItems.cs",
-              "DocumentMoniker": "C:\\project1\\My project\\Assets\\script\\MapinItems.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Documents\\GitHub\\project1\\My project\\Assets\\script\\MapinItems.cs",
               "RelativeDocumentMoniker": "Assets\\script\\MapinItems.cs",
-              "ToolTip": "C:\\project1\\My project\\Assets\\script\\MapinItems.cs",
+              "ToolTip": "C:\\Users\\user\\Documents\\GitHub\\project1\\My project\\Assets\\script\\MapinItems.cs",
               "RelativeToolTip": "Assets\\script\\MapinItems.cs",
               "ViewState": "AgIAABwAAAAAAAAAAAAuwC4AAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-29T00:41:20.874Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Player.cs",
-              "DocumentMoniker": "C:\\project1\\My project\\Assets\\script\\Player.cs",
-              "RelativeDocumentMoniker": "Assets\\script\\Player.cs",
-              "ToolTip": "C:\\project1\\My project\\Assets\\script\\Player.cs",
-              "RelativeToolTip": "Assets\\script\\Player.cs",
-              "ViewState": "AgIAAF0AAAAAAAAAAAAAAG0AAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-10T04:50:42.884Z",
-              "EditorCaption": ""
             }
           ]
         }

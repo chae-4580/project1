@@ -20,6 +20,7 @@ public class Player : MonoBehaviour
 
     public GameObject guide;
     public GameObject speak;
+    public GameObject[] AttackEffect;
     public int JumpCount = 0;
     public int JumpPower = 5;
     public int Speed = 5;
@@ -41,9 +42,15 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetButtonDown("Jump")) isJumping = true;
+        if (Freeze || GameManager.Instance.Pause.isOn) return;
+
+        if (Input.GetButtonDown("Jump")) isJumping = true;
+
+        if(Input.GetButtonDown("Attack")) isAttack = true;  
 
         Jump();
+
+        Attack();
 
         Move();
     }
@@ -61,6 +68,30 @@ public class Player : MonoBehaviour
         rigid.velocity = Vector3.zero;
 
         rigid.AddForce(Vector3.up*JumpPower, ForceMode2D.Impulse);
+    }
+
+    void Attack()
+    {
+        if(!isAttack || GameManager.Instance.AttackDelay > GameManager.Instance.Delay)
+        {
+            isAttack = false;
+            return;
+        }
+        isAttack = false;
+
+        int LR = (rend.flipX) ? 1 : 0;
+        AttackEffect[LR].SetActive(true);
+
+        StartCoroutine(delete(0.2f, LR));
+
+        GameManager.Instance.Delay = 0f;
+    }
+
+    IEnumerator delete(float time, int i)
+    {
+        yield return new WaitForSeconds(time);
+
+        AttackEffect[i].SetActive(false);
     }
 
     private void Move()
@@ -91,7 +122,7 @@ public class Player : MonoBehaviour
             GameManager.Instance.Hp--;
             Freeze = true;
 
-            if(GameManager.Instance.Hp <= 8)
+            if(GameManager.Instance.Hp <= 0)
             {
                 StartCoroutine(Dead());
             }
@@ -122,12 +153,17 @@ public class Player : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D other)
     {
-        /*if(GameManager.Instance.Pause.isOn)
+        if(GameManager.Instance.Pause.isOn)
         {
             Guide(false, 0);
             return;
-        }*/
+        }
         if (other.gameObject.name.Equals("hidden")) other.gameObject.GetComponent<Tilemap>().color = new Color(1, 1, 1, 1 / 2f);
+        if(other.gameObject.name.Equals("ladder"))
+        {
+            JumpCount = 0;
+            JumpPower = 3;
+        }
         if (guide.activeSelf) return;
         if (other.gameObject.CompareTag("Items") || other.gameObject.CompareTag("Coin")) Guide(true, 0);
         if (other.gameObject.name.Equals("Store") || other.gameObject.name.Equals("enter")) Guide(true, 1);
@@ -139,6 +175,7 @@ public class Player : MonoBehaviour
     {
         Guide(false, 0);
         if(other.gameObject.name.Equals("hidden")) other.gameObject.GetComponent<Tilemap>().color = Color.white;
+        if (other.gameObject.name.Equals("ladder")) JumpPower = 5;
     }
     public void Guide(bool turning, int i)
     {
