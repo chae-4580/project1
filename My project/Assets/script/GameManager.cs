@@ -80,7 +80,7 @@ public class GameManager : MonoBehaviour
     public GameObject[] SText;
     public int[] SPrice;
     public int O2level = 1;
-    public int BagLavel = 1;
+    public int BagLevel = 1;
     public int LightLevel = 1;
     public int KnifeLevel = 1;
     public bool isFree = false;
@@ -94,6 +94,8 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         Instance = this;
+
+        DataManager.Instance.StartGame();
     }
 
     // Update is called once per frame
@@ -259,6 +261,22 @@ public class GameManager : MonoBehaviour
         {
             Slotactive(8, false);
         }
+    }
+
+    public void GameResult()
+    {
+        DataManager.Instance.EndGame();
+        Result.SetActive(true);
+    }
+
+    public void ResetGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void Tomenu()
+    {
+        SceneManager.LoadScene("Title");
     }
 
 
@@ -588,4 +606,168 @@ public class GameManager : MonoBehaviour
                 break;
         }
     }
- }
+
+    public void BagUpgrade()
+    {
+        if (isFree)
+        {
+
+            BagLevel++;
+            SlotLimt += 2;
+
+            switch (BagLevel - 1)
+            {
+                case 1:
+                    SPrice[1] = 5000;
+                    SText[1].transform.GetChild(0).GetComponent<Text>().text = "0G";
+                    SText[1].GetComponent<Text>().text = "초대형 가방";
+                    break;
+                case 2:
+                    MaxWeight = 400;
+                    GameObject.Find("Bag_Sell").SetActive(false);
+                    break;
+            }
+
+            int k = 1;
+            foreach (Transform child in Slot.transform)
+            {
+                if (SlotLimt >= k) Slot.transform.GetChild(k).GetComponent<Image>().color = Color.white;
+                else break;
+                k++;
+            }
+            return;
+        }
+
+        if (Gold - SPrice[1] < 0) return;
+
+        Gold -= SPrice[1];
+
+        BagLevel++;
+        SlotLimt += 2;
+
+        switch (BagLevel - 1)
+        {
+            case 1:
+                SPrice[1] = 5000;
+                MaxWeight = 250;
+                SText[1].transform.GetChild(0).GetComponent<Text>().text = SPrice[1].ToString() + "G";
+                SText[1].GetComponent<Text>().text = "초대형 가방";
+                break;
+            case 2:
+                MaxWeight = 400;
+                GameObject.Find("Bag_Sell").SetActive(false);
+                break;
+        }
+        int j = 1;
+        foreach (Transform child in Slot.transform)
+        {
+            if (SlotLimt >= j) Slot.transform.GetChild(j).GetComponent<Image>().color = Color.white;
+            else break;
+            j++;
+        }
+    }
+    public void LightUpgrade()
+    {
+        if (isFree)
+        {
+
+            LightLevel++;
+            Dark.transform.localScale *= 1.2f;
+
+            switch (LightLevel - 1)
+            {
+                case 1:
+                    SPrice[2] = 1000;
+                    SText[2].transform.GetChild(0).GetComponent<Text>().text = "0G";
+                    SText[2].GetComponent<Text>().text = "초고급 손전등";
+                    break;
+                case 2:
+                    GameObject.Find("Light_Sell").SetActive(false);
+                    break;
+            }
+
+            return;
+        }
+
+        if (Gold - SPrice[2] < 0) return;
+
+        Gold -= SPrice[2];
+
+        LightLevel++;
+        Dark.transform.localScale *= 1.2f;
+
+        switch (LightLevel - 1)
+        {
+            case 1:
+                SPrice[2] = 2000;
+                SText[2].transform.GetChild(0).GetComponent<Text>().text = SPrice[2].ToString() + "G";
+                SText[2].GetComponent<Text>().text = "초고급 손전등";
+                break;
+            case 2:
+                GameObject.Find("Light_Sell").SetActive(false);
+                break;
+        }
+    }
+    public void KnifeUpgrade()
+    {
+        if (isFree)
+        {
+
+            KnifeLevel++;
+            Damage++;
+            AttackDelay -= 0.5f;
+
+            switch (KnifeLevel - 1)
+            {
+                case 1:
+                    SPrice[3] = 3000;
+                    SText[3].transform.GetChild(0).GetComponent<Text>().text = "0G";
+                    SText[3].GetComponent<Text>().text = "군용 단검";
+                    break;
+                case 2:
+                    GameObject.Find("Knife_Sell").SetActive(false);
+                    break;
+            }
+
+            return;
+        }
+
+        if (Gold - SPrice[3] < 0) return;
+
+        Gold -= SPrice[3];
+
+        KnifeLevel++;
+        Damage++;
+        AttackDelay -= 0.5f;
+
+        switch (KnifeLevel - 1)
+        {
+            case 1:
+                SPrice[3] = 3000;
+                SText[3].transform.GetChild(0).GetComponent<Text>().text = SPrice[3].ToString() + "G";
+                SText[3].GetComponent<Text>().text = "군용 단검";
+                break;
+            case 2:
+                GameObject.Find("Knife_Sell").SetActive(false);
+                break;
+        }
+    }
+    public void ShoseUpgrade()
+    {
+        if (isFree)
+        {
+            JumpLimt = 3;
+            GameObject.Find("Shose_Sell").SetActive(false);
+
+            return;
+        }
+        if (Gold - SPrice[4] < 0) return;
+
+        Gold -= SPrice[4];
+
+        JumpLimt = 3;
+        GameObject.Find("Shose_Sell").SetActive(false);
+    }
+
+
+}
