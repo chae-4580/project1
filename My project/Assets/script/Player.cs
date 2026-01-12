@@ -1,10 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Transactions;
-using System.Xml.Serialization;
-using Unity.VisualScripting;
-using UnityEditor.Build.Content;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 using UnityEngine.UI;
@@ -15,6 +10,7 @@ public class Player : MonoBehaviour
 
     Rigidbody2D rigid;
     SpriteRenderer rend;
+    Animator anim;
 
     bool isJumping = false;
 
@@ -35,6 +31,7 @@ public class Player : MonoBehaviour
     {
         Instance = this;
 
+        anim = GetComponent<Animator>();
         rigid = GetComponent<Rigidbody2D>();
         rend = GetComponent<SpriteRenderer>();
     }
@@ -81,6 +78,7 @@ public class Player : MonoBehaviour
 
         int LR = (rend.flipX) ? 1 : 0;
         AttackEffect[LR].SetActive(true);
+        anim.SetTrigger("isAttack");
 
         StartCoroutine(delete(0.2f, LR));
 
@@ -128,6 +126,7 @@ public class Player : MonoBehaviour
             }
             else
             {
+                anim.SetTrigger("isHit");
                 StartCoroutine(Freezecancel(0.6f));
                 rend.color = GameManager.Instance.Hurt;
                 GameManager.Instance.HitTime = 2;

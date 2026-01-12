@@ -6,7 +6,6 @@ using Unity.VisualScripting;
 using UnityEngine.SceneManagement;
 using UnityEngine.SocialPlatforms.Impl;
 using UnityEngine.U2D;
-using UnityEditor.Animations;
 
 public class GameManager : MonoBehaviour
 {
@@ -104,6 +103,8 @@ public class GameManager : MonoBehaviour
         if(stat)
         {
             StageLoad(1);
+            DataManager.Instance.StartGame();
+
             stat = false;
         }
 
@@ -173,6 +174,11 @@ public class GameManager : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.F6))
         {
             Player.Instance.Speed = 10;
+        }
+
+        if(Input.GetKeyDown(KeyCode.F7))
+        {
+            GameResult();
         }
 
         if(!Pause.isOn)

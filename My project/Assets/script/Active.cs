@@ -1,7 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Build.Content;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class Active : MonoBehaviour
@@ -83,7 +81,7 @@ public class Active : MonoBehaviour
             }
             else if(gameObject.name.Equals("exit"))
             {
-                //GameManager.Instance.selling(true);
+                GameManager.Instance.selling(true);
 
                 GameManager.Instance.StageLoad(GameManager.Instance.mapId);
             }

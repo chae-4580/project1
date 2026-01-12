@@ -66,6 +66,7 @@
     <Compile Include="Assets\script\Monster.cs" />
     <Compile Include="Assets\script\DataManager.cs" />
     <Compile Include="Assets\script\Player.cs" />
+    <Compile Include="Assets\script\Title.cs" />
     <Compile Include="Assets\script\MapinItems.cs" />
     <Compile Include="Assets\script\Ghost.cs" />
     <Compile Include="Assets\script\Active.cs" />
