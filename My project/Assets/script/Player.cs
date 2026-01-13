@@ -286,7 +286,7 @@ public class Player : MonoBehaviour
         rigid.rotation = 90f;
         rigid.constraints = RigidbodyConstraints2D.FreezeAll;
         gameObject.GetComponent<CircleCollider2D>().enabled = false;
-        //GameManager.Instance.selling(false);
+        GameManager.Instance.selling(false);
         speak.SetActive(false);
         guide.SetActive(false);
         Debug.Log("¾óÀ½");

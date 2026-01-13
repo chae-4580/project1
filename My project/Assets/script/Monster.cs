@@ -72,9 +72,9 @@ public class Monster : MonoBehaviour
 
     void ReStart()
     {
+        transform.position = respawn;
         hp = Hp;
         gameObject.GetComponent<CircleCollider2D>().enabled = true;
         if (Id == 1) rigid.gravityScale = 0;
-        transform.position = respawn;
     }
 }

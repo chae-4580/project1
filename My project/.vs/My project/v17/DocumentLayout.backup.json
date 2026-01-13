@@ -3,12 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\user\\Documents\\GitHub\\project1\\My project\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|C:\\Users\\user\\Documents\\GitHub\\project1\\My project\\assets\\script\\active.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|C:\\Users\\user\\Documents\\GitHub\\project1\\My project\\assets\\script\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|c:\\users\\user\\documents\\github\\project1\\my project\\assets\\script\\active.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\active.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|C:\\Users\\user\\Documents\\GitHub\\project1\\My project\\assets\\script\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|C:\\Users\\user\\Documents\\GitHub\\project1\\My project\\assets\\script\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|c:\\users\\user\\documents\\github\\project1\\my project\\assets\\script\\title.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\title.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|C:\\Users\\user\\Documents\\GitHub\\project1\\My project\\assets\\script\\monster.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -23,12 +31,8 @@
       "RelativeMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\gamedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|c:\\users\\user\\documents\\github\\project1\\my project\\assets\\script\\datamanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|C:\\Users\\user\\Documents\\GitHub\\project1\\My project\\assets\\script\\datamanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\datamanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|C:\\Users\\user\\Documents\\GitHub\\project1\\My project\\assets\\script\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|C:\\Users\\user\\Documents\\GitHub\\project1\\My project\\assets\\script\\orc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -46,17 +50,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Active.cs",
               "DocumentMoniker": "C:\\Users\\user\\Documents\\GitHub\\project1\\My project\\Assets\\script\\Active.cs",
               "RelativeDocumentMoniker": "Assets\\script\\Active.cs",
               "ToolTip": "C:\\Users\\user\\Documents\\GitHub\\project1\\My project\\Assets\\script\\Active.cs",
               "RelativeToolTip": "Assets\\script\\Active.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAAIwGIAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-10T05:44:03.725Z",
               "IsPinned": true,
@@ -64,13 +68,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 2,
               "Title": "GameManager.cs",
               "DocumentMoniker": "C:\\Users\\user\\Documents\\GitHub\\project1\\My project\\Assets\\script\\GameManager.cs",
               "RelativeDocumentMoniker": "Assets\\script\\GameManager.cs",
               "ToolTip": "C:\\Users\\user\\Documents\\GitHub\\project1\\My project\\Assets\\script\\GameManager.cs",
               "RelativeToolTip": "Assets\\script\\GameManager.cs",
-              "ViewState": "AgIAAGoCAAAAAAAAAAAAAHUCAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-10T06:03:33.778Z",
               "IsPinned": true,
@@ -78,7 +82,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "Orc.cs",
               "DocumentMoniker": "C:\\Users\\user\\Documents\\GitHub\\project1\\My project\\Assets\\script\\Orc.cs",
               "RelativeDocumentMoniker": "Assets\\script\\Orc.cs",
@@ -91,7 +95,24 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 3,
+              "Title": "Title.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Documents\\GitHub\\project1\\My project\\Assets\\script\\Title.cs",
+              "RelativeDocumentMoniker": "Assets\\script\\Title.cs",
+              "ToolTip": "C:\\Users\\user\\Documents\\GitHub\\project1\\My project\\Assets\\script\\Title.cs",
+              "RelativeToolTip": "Assets\\script\\Title.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAhwBkAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-12T00:56:43.515Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "DataManager.cs",
               "DocumentMoniker": "C:\\Users\\user\\Documents\\GitHub\\project1\\My project\\Assets\\script\\DataManager.cs",
               "RelativeDocumentMoniker": "Assets\\script\\DataManager.cs",
@@ -99,12 +120,11 @@
               "RelativeToolTip": "Assets\\script\\DataManager.cs",
               "ViewState": "AgIAADIAAAAAAAAAAAAQwEYAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-06T01:13:35.161Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-06T01:13:35.161Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "GameData.cs",
               "DocumentMoniker": "C:\\Users\\user\\Documents\\GitHub\\project1\\My project\\Assets\\script\\GameData.cs",
               "RelativeDocumentMoniker": "Assets\\script\\GameData.cs",
@@ -112,12 +132,11 @@
               "RelativeToolTip": "Assets\\script\\GameData.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAADwvwoAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-06T01:10:29.375Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-06T01:10:29.375Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "Ghost.cs",
               "DocumentMoniker": "C:\\Users\\user\\Documents\\GitHub\\project1\\My project\\Assets\\script\\Ghost.cs",
               "RelativeDocumentMoniker": "Assets\\script\\Ghost.cs",
@@ -125,12 +144,11 @@
               "RelativeToolTip": "Assets\\script\\Ghost.cs",
               "ViewState": "AgIAAAUAAAAAAAAAAADwvxUAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-05T04:18:55.675Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-05T04:18:55.675Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "Monster.cs",
               "DocumentMoniker": "C:\\Users\\user\\Documents\\GitHub\\project1\\My project\\Assets\\script\\Monster.cs",
               "RelativeDocumentMoniker": "Assets\\script\\Monster.cs",
@@ -138,25 +156,24 @@
               "RelativeToolTip": "Assets\\script\\Monster.cs",
               "ViewState": "AgIAABgAAAAAAAAAAAAIwCAAAABLAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-05T02:56:52.147Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-05T02:56:52.147Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Player.cs",
               "DocumentMoniker": "C:\\Users\\user\\Documents\\GitHub\\project1\\My project\\Assets\\script\\Player.cs",
               "RelativeDocumentMoniker": "Assets\\script\\Player.cs",
               "ToolTip": "C:\\Users\\user\\Documents\\GitHub\\project1\\My project\\Assets\\script\\Player.cs",
               "RelativeToolTip": "Assets\\script\\Player.cs",
-              "ViewState": "AgIAABoAAAAAAAAAAADgv5sAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAG4AAAAAAAAAAAAcwIAAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-10T04:50:42.884Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "MapinItems.cs",
               "DocumentMoniker": "C:\\Users\\user\\Documents\\GitHub\\project1\\My project\\Assets\\script\\MapinItems.cs",
               "RelativeDocumentMoniker": "Assets\\script\\MapinItems.cs",

@@ -13,6 +13,7 @@ public class MapinItems : MonoBehaviour
     public bool[] get;
 
     public bool isClear = false;
+    bool reseting = false;
 
     int findertarget;
 
@@ -20,8 +21,12 @@ public class MapinItems : MonoBehaviour
     void Update()
     {
         if (GameManager.Instance.isMapStart) Startroutine();
-        if (GameManager.Instance.Hp <= 0 || GameManager.Instance.curTime <= 0) Loss(); 
-        if(findertarget != -1 && (GameManager.Instance.FoundTresure == null || !Jem[findertarget].activeSelf))
+
+        if (!reseting && (GameManager.Instance.Hp <= 0 || GameManager.Instance.curTime <= 0)) Loss();
+
+        if (GameManager.Instance.Hp <= 0 || GameManager.Instance.curTime <= 0) return;
+
+        if (findertarget != -1 && (GameManager.Instance.FoundTresure == null || !Jem[findertarget].activeSelf))
         {
             GameManager.Instance.waveCenter.gameObject.SetActive(false);
             FoundTresure();
@@ -52,6 +57,7 @@ public class MapinItems : MonoBehaviour
     void Startroutine()
     {
         GameManager.Instance.isMapStart = false;
+        reseting = false;
         FoundTresure();
 
         for(int i = 0; i < Jem.Length; i++)
@@ -86,6 +92,7 @@ public class MapinItems : MonoBehaviour
     void Loss()
     {
         Debug.Log("loss");
+        reseting = true;
         isClear = false;
         GameManager.Instance.isClear = false;
         for(int i = 0; i < Jem.Length; i++)
@@ -93,7 +100,7 @@ public class MapinItems : MonoBehaviour
             if (get[i])
             {
                 get[i] = false;
-                isGotten[i] = false;    
+                isGotten[i] = false;
             }
         }
     }
